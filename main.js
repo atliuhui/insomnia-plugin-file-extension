@@ -26,7 +26,7 @@ module.exports.templateTags = [
             let config = parse(expression);
             console.debug(config);
 
-            switch (_.lowerCase(config.func)) {
+            switch (config.func) {
                 case "content":
                     return await insomnia_plugin_file.run(context, path);
                 case "size":
